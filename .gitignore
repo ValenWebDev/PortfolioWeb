@@ -1,0 +1,13 @@
+# Node_modules (si llegás a usar librerías de Node en el futuro)
+node_modules/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales de VS Code
+.vscode/
+
+# Archivos de log, builds, etc.
+*.log
+*.tmp

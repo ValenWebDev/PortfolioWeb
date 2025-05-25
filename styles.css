@@ -1,0 +1,264 @@
+:root {
+  /* Colores principales */
+    --color-negro-profundo: #0D0D0D;
+    --color-rojo-vibrante: #E63946;
+
+  /* Colores secundarios / neutros */
+    --color-gris-oscuro: #1E1E1E;
+    --color-gris-claro: #E0E0E0;
+    --color-blanco-suave: #F5F5F5;
+
+  /* Variaciones de rojo */
+    --color-rojo-oscuro: #A41623;
+    --color-rojo-suave: #FF6B6B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-gris-claro);
+}
+/* Header Section */
+
+.header {
+  width: 100dvw;
+  padding: 10px 0 24px 0;
+  position: fixed;
+  top: 0;
+  background-color: var(--color-gris-oscuro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s;
+  z-index: 100;
+}
+
+.header__nav {
+  background-color: var(--color-negro-profundo);
+  padding: 10px;
+  display: none;
+  position: relative;
+}
+
+label input[type="checkbox"] {
+  display: none;
+}
+
+.header__nav-toggle {
+  position: absolute;
+  color: var(--color-blanco-suave);
+  right: 0;
+  top: 5px;
+}
+
+header:has(input[type="checkbox"]:checked) .header__nav, header:has(input[type="checkbox"]:checked) {
+  padding-top: 34px;
+  z-index: 20;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-gris-oscuro);
+}
+
+.header:has(input[type="checkbox"]:checked) .header__nav {
+  border-top: 1px solid var(--color-gris-claro);
+}
+
+.nav__link {
+  text-decoration: none;
+  margin: auto;
+  position: relative;
+  top: 0;
+  color: var(--color-blanco-suave);
+  padding: 5px;
+}
+
+/* Hero Section */
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100dvh;
+  background: radial-gradient(ellipse at 80%, var(--color-negro-profundo), var(--color-rojo-oscuro));
+
+}
+
+.hero__img {
+  max-width: clamp(128px, 50%, 700px);
+  border-radius: 50%;
+  margin-top: 10%;
+  filter: drop-shadow(0px 0px 2px var(--color-blanco-suave));
+  margin-top: 20vh;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 10dvw, 7rem);
+  color: var(--color-rojo-vibrante);
+  text-shadow: 0 0 5px var(--color-negro-profundo);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  filter: drop-shadow(0 0 20px var(--color-rojo-vibrante));
+}
+
+.hero__bio {
+  max-width: clamp(200px, 75vw, 480px);
+  text-shadow: 0px 0px 5px var(--color-negro-profundo);
+  font-size: clamp(1.2rem, 5dvw, 5rem);
+  text-wrap: pretty;
+  margin: 1rem;
+  margin-bottom: 3rem;
+  color: var(--color-gris-claro);
+  font-family: 'Montserrat';
+}
+
+.hero__contact-button, .hero__work-button {
+  text-decoration: none;
+  color: var(--color-gris-oscuro);
+  background-color: var(--color-rojo-vibrante);
+  margin-top: 1.4rem;
+  padding: 15px;
+  min-width: clamp(250px, 40vw, 480px);
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0px 0px 20px var(--color-gris-oscuro);
+}
+
+.hero__work-button {
+  background-color: var(--color-gris-claro);
+}
+
+/* HERO ENDS */
+
+/* SKILLS SECTION */
+
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, var(--color-gris-oscuro), var(--color-negro-profundo));
+}
+
+.skills__grid-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr
+}
+
+.skills-section__title {
+  color: var(--color-blanco-suave);
+  margin-top: 50px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.skill {
+  margin: 20px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  width: clamp(200px, 70dvw, 300px);
+  background-color: var(--color-blanco-suave);
+  color: var(--color-gris-claro);
+  border-radius: 5px;
+}
+
+i {
+  font-size: clamp(2.5rem, 30dvw, 5rem);
+  text-align: center;
+  text-shadow: 0px 0px 2px #3332;
+  margin-right: 5px;
+}
+.skill__level {
+  font-size: clamp(1rem, 2dvw, 1.5rem);
+  overflow-wrap: break-word;
+  color: #aaa;
+  text-align: center;
+}
+
+.skill__soft {
+  color: var(--color-gris-oscuro);
+  text-align: center;
+  font-size: 1.1rem
+}
+
+/* SKILLS ENDS */
+
+/* PROJECTS SECTION */
+
+.projects-section {
+  margin-top: 2rem;
+}
+
+.projects-section__title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.projects-container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project {
+  background-color: var(--color-rojo-suave);
+  width: clamp(200px, 80vw, 800px);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project__info {
+  align-self: start;
+}
+
+.project__title {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-top: 1rem;
+}
+
+.project__img {
+  max-width: 80%;
+  border-radius: 50%;
+}
+
+
+.project__description {
+  font-weight: normal;
+  font-family: 'Montserrat';
+  color: var(--color-gris-claro);
+  margin: 10px;
+  text-wrap: pretty;
+}
+
+.project__skill {
+  font-size: 2.5rem;
+  filter: drop-shadow(0px 0px 2px #222);
+  border-radius: 50%;
+}
+
+.project__link {
+  text-decoration: none;
+  font-family: 'Montserrat';
+  padding: 10px;
+  background-color: var(--color-rojo-vibrante);
+  color: var(--color-negro-profundo);
+  margin: 10px 0;
+  border-radius: 10px;
+}
