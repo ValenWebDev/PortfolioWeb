@@ -17,46 +17,54 @@
             <input type="checkbox">
         </label>
         <nav class="header__nav">
-            <a href="#skills" class="nav__link">My Skills</a>
-            <a href="#" class="nav__link">Projects</a>
-            <a href="#" class="nav__link">About Me</a>
-            <a href="#" class="nav__link">Contact</a>
+            <a href="#skills" class="nav__link">Habilidades</a>
+            <a href="#projects" class="nav__link">Proyectos</a>
+            <a href="#about" class="nav__link">Sobre Mi</a>
+            <a href="#contact" class="nav__link">Contacto</a>
         </nav>
     </header>
     <main>
-        <section class="hero-section">
-                <img src="assets/imagen llaves.webp" alt="foto de perfil" class="hero__img">
-                <h1>Valentin Michelle</h1>
-                <h2 class="hero__bio">front-end developer crafting responsive, accessible web experiences with clean HTML, CSS, and modern design principles.</h3>
-                <a class="hero__contact-button" href="#">CONTACT ME</a>
-                <a class="hero__work-button" href="#">SEE WORK</a>
-        </section>
-        <section class="skills-section">
-            <h2 class="skills-section__title" id="skills">MY SKILLS</h2>
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>Valentín Michelle</h1>
+    <p class="hero__bio">
+      Desarrollador Front-end que crea experiencias web responsivas y accesibles
+      con HTML limpio, CSS moderno y buenas prácticas de diseño.
+    </p>
+    <div class="hero-buttons">
+      <a class="hero__contact-button" href="#contact">CONTÁCTAME</a>
+      <a class="hero__work-button" href="#projects">VER TRABAJOS</a>
+    </div>
+  </div>
+  <img src="assets/micara.png" alt="Foto de perfil" class="hero__img">
+</section>
+
+        <section class="skills-section"  id="skills">
+            <h2 class="skills-section__title">MIS HABILIDADES</h2>
             <div class="skills__grid-container">
                 <div class="skill">
-                    <i class="devicon-html5-plain colored"></i> <span class="skill__level">Intermediate / Advanced</span> 
+                    <i class="devicon-html5-plain colored"></i> <span class="skill__level">Intermedio / Avanzado</span> 
                 </div>
                 <div class="skill">
-                    <i class="devicon-css3-plain colored"></i> <span class="skill__level">Intermediate</span> 
+                    <i class="devicon-css3-plain colored"></i> <span class="skill__level">Intermedio</span> 
                 </div>
                 <div class="skill">
-                    <i class="devicon-git-plain colored"></i> <span class="skill__level">Intermediate</span> 
+                    <i class="devicon-git-plain colored"></i> <span class="skill__level">Intermedio</span> 
                 </div>
                 <div class="skill">
-                    <i class="devicon-github-original colored"></i> <span class="skill__level">Intermediate</span> 
+                    <i class="devicon-github-original colored"></i> <span class="skill__level">Intermedio</span> 
                 </div>
                 <div class="skill">
-                    <i class="devicon-javascript-plain colored"></i> <span class="skill__level">Basic / Intermediate</span> 
+                    <i class="devicon-javascript-plain colored"></i> <span class="skill__level">Básico / Intermedio</span> 
                 </div>
                 <div class="skill">
-                    <span class="skill__soft">Responsive Design</span>
+                    <span class="skill__soft">Diseño Responsivo</span>
                 </div>
             </div>
         </section>
 
-        <section class="projects-section">
-            <h2 class="projects-section__title">PROJECTS</h2>
+        <section class="projects-section" id="projects">
+            <h2 class="projects-section__title">PROYECTOS</h2>
             <div class="projects-container">
                 <div class="project">
                     <h3 class="project__title">Project 1</h3>
@@ -66,7 +74,7 @@
                         <i class="devicon-html5-plain colored project__skill"></i>
                         <i class="devicon-css3-plain colored project__skill"></i>
                     </div>
-                    <a href="#" class="project__link">View Live Site</a>
+                    <a href="#" class="project__link">Ver En Directo</a>
                 </div>
                 <div class="project">
                     <h3 class="project__title">Project 2</h3>
@@ -76,7 +84,7 @@
                         <i class="devicon-html5-plain colored project__skill"></i>
                         <i class="devicon-css3-plain colored project__skill"></i>
                     </div>
-                    <a href="#" class="project__link">View Live Site</a>
+                    <a href="#" class="project__link">Ver En Directo</a>
                 </div>
                 <div class="project">
                     <h3 class="project__title">Project 3</h3>
@@ -87,10 +95,98 @@
                         <i class="devicon-css3-plain colored project__skill"></i>
                         <i class="devicon-git-plain colored project__skill"></i>
                     </div>
-                    <a href="#" class="project__link">View Live Site</a>
+                    <a href="#" class="project__link">Ver En Directo</a>
                 </div>
             </div>
         </section>
+
+        <section class="about-section" id="about">
+        <div class="about__body">
+            <div class="about__body--text-container">
+            <h2 class="about__title">SOBRE MÍ</h2>
+            <p class="about__text">
+                ¡Hola! Soy Valentín Michelle, un desarrollador Front-end residente en Argentina. 
+                Me apasiona traducir diseños a código limpio y accesible, creando sitios web 
+                responsivos que funcionen en cualquier dispositivo. Comence a orientarmee en el mundo
+                de la programacion y el diseño a los 12 años y en 2024 me especialicé en HTML5 y CSS3: dominé técnicas y propiedades 
+                como Flexbox, Grid y funciones modernas. Ahora estoy profundizando 
+                mis habilidades en JavaScript y planeo aprender frameworks y mas habilidades para construir 
+                aplicaciones y paginas web aún más interactivas.
+
+                Mis puntos fuertes:
+                <ul class="about__list">
+                <li>Maquetación semántica (HTML5, CSS3 responsive).</li>
+                <li>Uso de Google Fonts y tipografías modernas (Poppins, Raleway, Montserrat).</li>
+                <li>Control de versiones con Git y entornos de desarrollo en VS Code.</li>
+                <li>Aprendizaje autodidacta y resolución de problemas.</li>
+                </ul>
+
+                Mi objetivo a corto plazo es especializarme en React y Next.js para ofrecer 
+                soluciones más dinámicas y eficientes. Si querés saber más o colaborar en tu próximo 
+                proyecto web, podés escribirme en la sección <a href="#contact" class="about__link">Contacto</a>.
+            </p>
+            </div>
+        </div>
+        </section>
+
+        <!-- … sección “Sobre mí” … -->
+
+        <section class="contact-section" id="contact">
+        <h2 class="contact-title">CONTÁCTAME</h2>
+        <form class="contact__form" action="#" method="POST">
+            <div class="form__group">
+            <label for="name" class="form__label">Nombre</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                class="form__input"
+                placeholder="Tu nombre completo"
+                required
+            />
+            </div>
+
+            <div class="form__group">
+            <label for="email" class="form__label">Correo electrónico</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                class="form__input"
+                placeholder="ejemplo@dominio.com"
+                required
+            />
+            </div>
+
+            <div class="form__group">
+            <label for="message" class="form__label">Mensaje</label>
+            <textarea
+                id="message"
+                name="message"
+                class="form__textarea"
+                placeholder="Escribe tu mensaje aquí..."
+                rows="6"
+                required
+            ></textarea>
+            </div>
+
+            <button type="submit" class="form__button">ENVIAR MENSAJE</button>
+        </form>
+        </section>
+
     </main>
+    <!-- Después de la sección “About Me” -->
+    <footer>
+    <div class="footer__content">
+        <p>&copy; 2025 Valentín Michelle. Todos los derechos reservados.</p>
+        <p>
+        Diseñado y desarrollado por mí.
+        <br />
+        <a href="https://github.com/valenwebdev" target="_blank" rel="noopener">GitHub</a> |
+        <a href="https://linkedin.com/in/tuUsuario" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+    </div>
+    </footer>
+
 </body>
 </html>
