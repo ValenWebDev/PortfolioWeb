@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +7,45 @@
     <meta name="keywords" content="Valentín Michelle, Front-end Developer, HTML5, CSS3, JavaScript, Responsive Design, Portfolio">
     <meta name="author" content="Valentín Michelle">
     <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Valentín Michelle – Desarrollador Web Front-end">
+    <meta property="og:description" content="Mirá mis proyectos web responsivos con HTML, CSS y JavaScript.">
+    <meta property="og:image" content="https://valenwebdev.com/assets/logovm1024.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:url" content="https://valenwebdev.com">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://valenwebdev.com/">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <title>Valentín Michelle | Portfolio</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png" sizes="64x64">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Valentín Michelle",
+            "url": "https://valenwebdev.com/",
+            "sameAs": [
+            "https://github.com/valenwebdev"
+            ],
+            "jobTitle": "Desarrollador Web Front-end",
+            "description": "Portfolio de proyectos web responsivos con HTML, CSS y JavaScript."
+        }
+    </script>
+    <title>Valentín Michelle | Desarrollador Front-end en Argentina – Portfolio</title>
 </head>
 <body>
     <header class="header">
         <label class="material-symbols-outlined header__nav-toggle">menu
             <input type="checkbox">
         </label>
-        <nav class="header__nav">
+        <nav class="header__nav" aria-label="Navegación principal">
             <a href="#skills" class="nav__link">Habilidades</a>
             <a href="#projects" class="nav__link">Proyectos</a>
             <a href="#about" class="nav__link">Sobre Mi</a>
@@ -29,19 +54,24 @@
     </header>
     <main>
         <section class="hero-section">
-        <div class="hero-content">
-            <h1>Valentín Michelle</h1>
-            <p class="hero__bio">
+    <div class="hero-content">
+        <h1>Valentín Michelle</h1>
+        <p class="hero__bio">
             Desarrollador Front-end que crea experiencias web responsivas y accesibles
             con HTML limpio, CSS moderno y buenas prácticas de diseño.
-            </p>
-            <div class="hero-buttons">
+        </p>
+        <div class="hero-buttons">
             <a class="hero__contact-button" href="#contact">CONTÁCTAME</a>
             <a class="hero__work-button" href="#projects">VER TRABAJOS</a>
-            </div>
         </div>
-        <img src="assets/micara.jpg" alt="Foto de Valentin Michelle" class="hero__img">
-        </section>
+    </div>
+    <picture class="hero__img">
+        <source srcset="assets/micaraia-small.webp" media="(max-width: 600px)">
+        <img src="assets/micaraia.webp" alt="Foto de Valentín Michelle" class="hero__photo">
+    </picture>
+
+</section>
+
 
         <section class="skills-section"  id="skills">
             <h2 class="skills-section__title">MIS HABILIDADES</h2>
@@ -72,7 +102,7 @@
             <div class="projects-container">
                 <div class="project">
                     <h3 class="project__title">Dulce Momento</h3>
-                    <img src="assets/dulcemomento.png" loading="lazy" alt="project 1" class="project__img">
+                    <img src="assets/dulcemomento.png" loading="lazy" alt="Captura del proyecto Dulce Momento, sitio web para pastelería" class="project__img">
                     <h4 class="project__description">Pagina Web de una pasteleria que se dedica a la venta de tortas. 100% hecha por mi</h4>
                     <div class="project__skills">
                         <i class="devicon-html5-plain colored project__skill"></i>
@@ -83,7 +113,7 @@
                 </div>
                 <div class="project">
                     <h3 class="project__title">Dashboard Admin.</h3>
-                    <img src="assets/dashboardadministrativo.png" loading="lazy" alt="project 3" class="project__img">
+                    <img src="assets/dashboardadministrativo.png" loading="lazy" alt="Captura del proyecto Dashboard administrativo" class="project__img">
                     <h4 class="project__description">Dashboard Administrativo hecho 100% con HTML y CSS sin Javascript, uno de los proyectos que mas me costó hacer en cuanto a dificultad y técnica</h4>
                     <div class="project__skills">
                         <i class="devicon-html5-plain colored project__skill"></i>
@@ -93,7 +123,7 @@
                 </div>
                 <div class="project">
                     <h3 class="project__title">Eduardo Mensajeria</h3>
-                    <img src="assets/eduardomensajeria.png" sizes="1900px" loading="lazy" alt="project 2" class="project__img">
+                    <img src="assets/eduardomensajeria.png" sizes="1900px" loading="lazy" alt="Captura del proyecto Eduardo Mensajeria, sitio de servicios de mensajeria, entregas, paquetes y similares" class="project__img">
                     <h4 class="project__description">Landing Page para una empresa de mensajeria, entregas y servicios relacionados</h4>
                     <div class="project__skills">
                         <i class="devicon-html5-plain colored project__skill"></i>
@@ -196,29 +226,32 @@
 
 
     <!-- EmailJS SDK -->
+    <!-- 1) Cargás el SDK de EmailJS -->
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-    // Inicializar EmailJS
+    // 2) Inicializás con tu Public Key (user ID)
     (function () {
-        emailjs.init('7ndcHgknQgTIBvWrU'); // Reemplazá con tu public key (antes era "user_xxx")
+        emailjs.init('7ndcHgknQgTIBvWrU');
     })();
 
-    // Capturar el form
+    // 3) Capturás el form
     const form = document.querySelector('.contact__form');
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        emailjs.sendForm('service_xeb3a8o', '7ndcHgknQgTIBvWrU', this)
+        // 4) Enviar usando service ID y template ID CORRECTOS
+        emailjs.sendForm('service_xeb3a8o', 'template_m5b4c3u', this)
         .then(() => {
             alert('¡Mensaje enviado con éxito!');
-            form.reset(); // Limpia el formulario
+            form.reset();
         }, (error) => {
             console.error('Error al enviar:', error);
             alert('Ocurrió un error. Intentalo más tarde.');
         });
     });
     </script>
+
 
 </body>
 </html>

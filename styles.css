@@ -93,13 +93,21 @@ header:has(input[type="checkbox"]:checked) .header__nav, header:has(input[type="
 }
 
 .hero__img {
-  max-width: clamp(128px, 50%, 700px);
-  border-radius: 50%;
-  filter: drop-shadow(0px 0px 2px var(--color-blanco-suave));
   margin-top: 5vh;
   order: -1;
   align-self: center;
+  max-width: clamp(128px, 50%, 700px);
+  display: flex;
+  justify-content: center;
 }
+
+.hero__photo {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  filter: drop-shadow(0px 0px 2px var(--color-blanco-suave));
+}
+
 
 .hero-content {
   flex: 1;
