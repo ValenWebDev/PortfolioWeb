@@ -22,7 +22,7 @@
 }
 
 body {
-  background-color: var(--color-gris-claro);
+  background-color: var(--color-blanco-suave);
 }
 /* Header Section */
 
@@ -129,6 +129,21 @@ h1 {
   font-weight: 700;
   letter-spacing: 1px;
   filter: drop-shadow(0 0 20px var(--color-rojo-vibrante));
+  animation: h1anim infinite 10s ease;
+}
+
+@keyframes h1anim {
+  from {
+    translate: 0;
+  }
+
+  50% {
+    translate: 0 1rem;
+  }
+
+  to {
+    translate: 0;
+  }
 }
 
 .hero__bio {
@@ -241,6 +256,7 @@ i {
 .project {
   background-color: var(--color-rojo-suave);
   width: clamp(200px, 80vw, 800px);
+  height: 100%;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -254,12 +270,19 @@ i {
 .project__title {
   text-align: center;
   font-size: 1.7rem;
+  font-family: 'Poppins';
   margin-top: 1rem;
 }
 
 .project__img {
-  max-width: 80%;
-  border-radius: 50%;
+  max-width: 90%;
+  border-radius: 5px;
+  margin: 3rem 0;
+  transition: transform .3s;
+}
+
+.project__img:hover {
+  transform: scale(1.05);
 }
 
 
@@ -285,6 +308,7 @@ i {
   color: var(--color-negro-profundo);
   margin: 10px 0;
   border-radius: 10px;
+  transition: all .3s;
 }
 
 /* PROJECTS ENDS */
@@ -347,6 +371,12 @@ i {
 
 .about__link {
   color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.about__link:hover {
+  text-decoration: underline;
 }
 
 /* ABOUT ENDS */
@@ -354,7 +384,7 @@ i {
 /* CONTACT SECTION */
 .contact-section {
   padding: 4rem 1rem;
-  background-color: var(--color-blanco-suave);
+  background-color: var(--color-gris-claro);
 }
 
 .contact-title {
@@ -369,6 +399,9 @@ i {
 .contact__form {
   max-width: 600px;
   margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--color-blanco-suave);
 }
 
 .form__group {
@@ -583,7 +616,11 @@ footer .footer-content {
   }
 
   .project__img {
-    max-width: 300px;
+    max-width: 350px;
+  }
+
+  .project__link:hover {
+    transform: scale(1.05);
   }
 
   /* ABOUT SECTION */
@@ -614,6 +651,39 @@ footer .footer-content {
   }
 }
 
+/* Añadir media query específica para móviles pequeños */
+@media (max-width: 480px) {
+  .hero__bio {
+    font-size: 1rem;
+    max-width: 90vw;
+  }
+  
+  .hero-buttons a {
+    min-width: 90%;
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+  
+  
+  .project {
+    width: 95vw;
+  }
+  
+  .form__input, .form__textarea {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mejorar touch targets */
+.nav__link {
+  padding: 12px 15px;
+  min-height: 48px;
+}
+
+.hero__contact-button, .hero__work-button {
+  min-height: 48px;
+}
+
 /* MEDIA QUERY INTERMEDIA (768px - 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   /* HERO STYLES */
@@ -625,7 +695,7 @@ footer .footer-content {
 
   /* SKILLS GRID */
   .skills__grid-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 
   /* PROJECTS GRID */
