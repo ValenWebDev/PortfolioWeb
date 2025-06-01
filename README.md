@@ -13,29 +13,31 @@ Este es mi portfolio personal como desarrollador frontend. Está creado con HTML
 ## 🛠️ Tecnologías utilizadas
 
 - HTML5 semántico
-- CSS3 moderno (Flexbox, Grid, clamp(), animaciones, media queries)
+- CSS3 moderno (Flexbox, Grid, `clamp()`, animaciones, media queries)
 - Variables CSS (`:root`)
 - Diseño responsive
 - Favicon personalizado
-- Imagenes optimizadas para distintos dispositivos
+- Imágenes optimizadas para distintos dispositivos
 
 ---
 
 ## 🧠 Qué muestra este portfolio
 
-- Información personal y bio
-- Proyectos reales y en desarrollo
-- Interfaces atractivas y adaptativas
-- Estética cuidada (colores, sombras, tipografías)
-- Código ordenado y escalable
+- Información personal y bio  
+- Proyectos reales y en desarrollo  
+- Interfaces atractivas y adaptativas  
+- Estética cuidada (colores, sombras, tipografías)  
+- Código ordenado y escalable  
 
 ---
 
 ## 📂 Estructura del proyecto
 
+```plaintext
 📁 /assets
 ├── /img
 ├── /icons
 └── /fonts
-Index.html
-Styles.css
+
+📄 index.html
+📄 styles.css
